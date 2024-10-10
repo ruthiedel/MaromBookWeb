@@ -6,12 +6,12 @@ function renderBooks(books) {
     books.forEach(book => {
         const row = document.createElement("tr");
         row.innerHTML = `
-            <td onclick="onBookClick(${book.id})">${book.id}</td>
-            <td onclick="onBookClick(${book.id})">${book.title}</td>
+            <td class="for-cursor" onclick="onBookClick(${book.id})">${book.id}</td>
+            <td class="for-cursor" onclick="onBookClick(${book.id})">${book.title}</td>
             <td>$${book.price.toFixed(2)}</td>
             <td>
-                <button onclick="onBookClick(${book.id})">Read</button>
-                <button onclick="onBookUpdateClick(${book.id})">Update</button>
+                <button class="button" onclick="onBookClick(${book.id})">Read</button>
+                <button class="button" onclick="onBookUpdateClick(${book.id})">Update</button>
                 <button class="delete" onclick="onBookDelete(${book.id})">🗑️</button>
             </td>
         `;
@@ -44,8 +44,7 @@ function renderBookDetails(book) {
         <h1>Book Details</h1>
         <h2>${book.title}</h2>
         <img src="${book.image}" alt="${book.title}">
-        <p>Author: ${book.author}</p>
-        <p>Price: $${book.price.toFixed(2)}</p>
+        <p>Price: ${book.price.toFixed(2)}</p>
         <div class="rating">
                     <button onclick="onRangeReduce(${book.id})">-</button>
                     <span id="book-rate">${book.rate}</span>
@@ -79,7 +78,7 @@ function onAddBook(event) {
     document.getElementById("sidebar").style.display = "none";
 
     let book = {
-        id: document.getElementById("book-id-input").value,
+        id:parseInt(document.getElementById("book-id-input").value),
         title: document.getElementById("book-title-input").value,
         price: parseFloat(document.getElementById("book-price-input").value),
         image: document.getElementById("book-image-input").value

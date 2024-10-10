@@ -14,8 +14,8 @@
             <div class="language-select">
                 <button class="load-data" onclick="onLoadData()">Load Data</button>
                 <select>
-                    <option value="English">English</option>
-                    <option value="Other">Other</option>
+                    <option value=0>English</option>
+                    <option value=1>Hebrew</option>
                 </select>
             </div>
         </header>
@@ -26,8 +26,13 @@
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Title</th>
-                            <th>Price</th>
+                            <th>Title
+                                <span onclick="sortBooks('title', 'asc')">↑</span>
+                                <span onclick="sortBooks('title', 'desc')">↓</span>
+                            </th>
+                            <th>Price
+                                <span onclick="sortBooks('price', 'asc')">↑</span>
+                                <span onclick="sortBooks('price', 'desc')">↓</span> </th>
                             <th>Action</th>
                         </tr>
                     </thead>

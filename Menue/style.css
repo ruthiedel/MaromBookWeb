@@ -178,3 +178,8 @@ td button {
 .close-btn:hover {
     color: red;
 }
+
+.for-cursor
+{
+    cursor: pointer;
+}

@@ -99,3 +99,15 @@ function onBookUpdateClick(id) {
     openAddSideBar('update', book);
 
 }
+
+function sortBooks(property, order) {
+    Gbooks.sort((a, b) => {
+        if (property === 'price') {
+            return order === 'asc' ? a.price - b.price : b.price - a.price;
+        } else if (property === 'title') {
+            return order === 'asc' ? a.title.localeCompare(b.title) : b.title.localeCompare(a.title);
+        }
+    });
+    CurrentBook=0;
+    renderBooks(Gbooks.slice(CurrentBook, CurrentBook + 5));
+}
