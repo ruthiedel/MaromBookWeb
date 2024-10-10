@@ -12,7 +12,7 @@
             <h1>Bookshop ERP</h1>
             <button class="new-book">+ New book</button>
             <div class="language-select">
-                <button class="load-data">Load Data</button>
+                <button class="load-data" onclick="onLoadData()">Load Data</button>
                 <select>
                     <option value="English">English</option>
                     <option value="Other">Other</option>
@@ -38,26 +38,22 @@
                     </tbody>
                 </table>
                 <div class="pagination">
-                    <button class="back">Back</button>
+                    <button class="back" onclick="onPrevClick()">Back</button>
                     <div id = "nav-btns">
 
                     </div>
-                    <button class="next">Next</button>
+                    <button class="next" onclick="onNextClick()">Next</button>
                 </div>
             </section>
 
-            <section class="book-details">
-                <h2>The Hitchhikers Guide to the Galaxy</h2>
-                <img src="book-cover.jpg" alt="The Hitchhikers Guide to the Galaxy" class="book-cover">
-                <p>Price: $13.95</p>
-                <div class="rating">
-                    <button>-</button>
-                    <span>7</span>
-                    <button>+</button>
-                </div>
+            <section class="book-details" id ="book-details">
+                <h1>Book Details</h1>
+                <p>No book selected yet.</p>
+                
             </section>
         </main>
     </div>
+   
     <script src="bookDB.js"></script>
     <script src="view.js"></script>
     <script src="conroller.js"></script>
