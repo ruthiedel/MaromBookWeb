@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshop ERP</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Bookshop ERP</h1>
+            <button class="new-book">+ New book</button>
+            <div class="language-select">
+                <button class="load-data">Load Data</button>
+                <select>
+                    <option value="English">English</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </header>
+
+        <main>
+            <section class="book-list">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Title</th>
+                            <th>Price</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="book-list-body">
+                        
+                      
+
+                    </tbody>
+                </table>
+                <div class="pagination">
+                    <button class="back">Back</button>
+                    <div id = "nav-btns">
+
+                    </div>
+                    <button class="next">Next</button>
+                </div>
+            </section>
+
+            <section class="book-details">
+                <h2>The Hitchhikers Guide to the Galaxy</h2>
+                <img src="book-cover.jpg" alt="The Hitchhikers Guide to the Galaxy" class="book-cover">
+                <p>Price: $13.95</p>
+                <div class="rating">
+                    <button>-</button>
+                    <span>7</span>
+                    <button>+</button>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="bookDB.js"></script>
+    <script src="view.js"></script>
+    <script src="conroller.js"></script>
+</body>
+</html>
