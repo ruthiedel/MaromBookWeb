@@ -10,7 +10,7 @@
     <div class="container">
         <header>
             <h1>Bookshop ERP</h1>
-            <button class="new-book">+ New book</button>
+            <button class="new-book" onclick="onNewBookClick()">+ New book</button>
             <div class="language-select">
                 <button class="load-data" onclick="onLoadData()">Load Data</button>
                 <select>
@@ -53,7 +53,17 @@
             </section>
         </main>
     </div>
-   
+    <sidebar class="sidebar" id="sidebar">
+        <button class="close-btn" onclick="closeSidebar()">X</button>
+        <form class="add-update-form" id="add-update-form">
+            <h1 id="task-name" class="sidebar-item"></h1>
+            <input type="text" placeholder="bookId" class="sidebar-item" id="book-id-input" name="book-id-input">
+            <input type="text" placeholder="title" class="sidebar-item" id="book-title-input" name="book-title-input">
+            <input type="text" placeholder="price" class="sidebar-item" id="book-price-input" name="book-price-input">
+            <input type="text" placeholder="image url" class="sidebar-item" id="book-image-input" name="book-img-input">
+            <button class="button" id="add-update-btn" on></button>
+        </form>
+    </sidebar>
     <script src="bookDB.js"></script>
     <script src="view.js"></script>
     <script src="conroller.js"></script>

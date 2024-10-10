@@ -62,7 +62,8 @@ table {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-th, td {
+th,
+td {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -95,7 +96,8 @@ td button {
     padding: 5px 10px;
     cursor: pointer;
 }
-.active-btn{
+
+.active-btn {
     background-color: #010101;
     color: #fff;
 }
@@ -130,3 +132,49 @@ td button {
     font-size: 1.5rem;
 }
 
+.sidebar {
+    display: none;
+    background-color: #333;
+    color: #030303;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100vh;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    padding: 20px;
+    text-align: center;
+}
+
+.sidebar-item {
+    margin: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 40px;
+    
+
+}
+
+.button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #000;
+    color: #fff;
+   
+    cursor: pointer;
+    border-radius: 6px;
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: red;
+}
