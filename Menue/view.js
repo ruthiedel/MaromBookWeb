@@ -113,3 +113,43 @@ function onUpdateBook(event) {
 function closeSidebar() {
     document.getElementById("sidebar").style.display = "none";
 }
+
+function onLanguageChange(select) {
+    switchLanguage(select.value);
+    const language = select.value;
+    const body = document.body;
+    const bookListSection = document.querySelector('.book-list');
+    const bookDetailsSection = document.querySelector('.book-details');
+    if (language === 'hebrew') {
+        
+        body.setAttribute('dir', 'rtl');
+        body.style.direction = 'rtl';
+        bookDetailsSection.style.float = 'left';
+        bookListSection.style.float = 'right';
+
+    } else {
+        body.setAttribute('dir', 'ltr');
+        body.style.direction = 'ltr';
+        bookDetailsSection.style.float = 'right';
+        bookListSection.style.float = 'left';
+    }
+}
+
+
+
+function switchLanguage(lang) {
+    document.querySelector('h1').innerText = language.headTitle[lang];
+    document.querySelector('.new-book').innerText = language.newBookButton[lang];
+    document.querySelector('.load-data').innerText = language.loadDataButton[lang];
+
+    const tableHeaders = document.querySelectorAll('th');
+    tableHeaders[0].innerText = language.tableHeaders.id[lang];
+    tableHeaders[1].innerText = language.tableHeaders.title[lang];
+    tableHeaders[2].innerText = language.tableHeaders.price[lang];
+    tableHeaders[3].innerText = language.tableHeaders.action[lang];
+
+    document.querySelector('.back').innerText = language.backButton[lang];
+    document.querySelector('.next').innerText = language.nextButton[lang];
+    document.querySelector('.book-details h1').innerText = language.bookDetailsTitle[lang];
+    document.querySelector('.book-details p').innerText = language.noBookSelected[lang];
+}

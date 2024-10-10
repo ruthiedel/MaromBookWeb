@@ -15,6 +15,104 @@ const Dbooks = [
    
   ];
   
+  var language = {
+    headTitle: {
+        english: "Bookshop ERP",
+        hebrew: "מערכת לניהול חנות ספרים"
+    },
+    newBookButton: {
+        english: "+ New book",
+        hebrew: "+ ספר חדש"
+    },
+    loadDataButton: {
+        english: "Load Data",
+        hebrew: "טען נתונים"
+    },
+    tableHeaders: {
+        id: {
+            english: "Id",
+            hebrew: "מזהה"
+        },
+        title: {
+            english: "Title",
+            hebrew: "כותרת"
+        },
+        price: {
+            english: "Price",
+            hebrew: "מחיר"
+        },
+        action: {
+            english: "Action",
+            hebrew: "פעולה"
+        }
+    },
+    readButton: {
+        english: "Read",
+        hebrew: "קרא"
+    },
+    updateButton: {
+        english: "Update",
+        hebrew: "עדכן"
+    },
+    backButton: {
+        english: "Back",
+        hebrew: "חזור"
+    },
+    nextButton: {
+        english: "Next",
+        hebrew: "הבא"
+    },
+    bookDetailsTitle: {
+        english: "Book Details",
+        hebrew: "פרטי הספר"
+    },
+    noBookSelected: {
+        english: "No book selected yet.",
+        hebrew: "לא נבחר ספר."
+    },
+    priceLabel: {
+        english: "Price:",
+        hebrew: "מחיר:"
+    },
+    rateLabel: {
+        english: "Rate:",
+        hebrew: "דירוג:"
+    },
+    languageSelector: {
+        english: "English",
+        hebrew: "עברית"
+    },
+    addUpdateBookButton: {
+        english: "Add Book",
+        hebrew: "הוסף ספר"
+    },
+    updateBookButton: {
+        english: "Update Book",
+        hebrew: "עדכן ספר"
+    },
+    bookIdPlaceholder: {
+        english: "bookId",
+        hebrew: "מזהה ספר"
+    },
+    bookTitlePlaceholder: {
+        english: "title",
+        hebrew: "כותרת"
+    },
+    bookPricePlaceholder: {
+        english: "price",
+        hebrew: "מחיר"
+    },
+    bookImagePlaceholder: {
+        english: "image url",
+        hebrew: "כתובת תמונה"
+    },
+    closeButton: {
+        english: "Close",
+        hebrew: "סגור"
+    }
+};
+
+
 
   var Gbooks =[];
   var CurrentBook=0;
