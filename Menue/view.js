@@ -144,8 +144,9 @@ function switchLanguage(lang) {
 
     const tableHeaders = document.querySelectorAll('th');
     tableHeaders[0].innerText = language.tableHeaders.id[lang];
-    tableHeaders[1].innerText = language.tableHeaders.title[lang];
-    tableHeaders[2].innerText = language.tableHeaders.price[lang];
+    tableHeaders[1].innerHtml = language.tableHeaders.title[lang]+`<span class="for-cursor" onclick="sortBooks('title', 'asc')">↑</span>
+                                <span  class="for-cursor" onclick="sortBooks('title', 'desc')">↓</span>`;
+    tableHeaders[2].innerHtml = language.tableHeaders.price[lang]+``;
     tableHeaders[3].innerText = language.tableHeaders.action[lang];
 
     document.querySelector('.back').innerText = language.backButton[lang];
