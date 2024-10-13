@@ -1,6 +1,3 @@
-
-
-
 function onLoad() {
     Gbooks = JSON.parse(localStorage.getItem('books'));
     if (!Gbooks) {
@@ -11,15 +8,12 @@ function onLoad() {
     renderNavigateButtons(Math.ceil(Gbooks.length / 5), 1);
 }
 
-
-
-
 onLoad()
 
 
 
-function onLoadData() {
 
+function onLoadData() {
     let bookDetails = document.getElementById("book-details");
     bookDetails.innerHTML = '<h1>Book Details</h1><p>No book selected yet.</p>';
     Gbooks = Dbooks;
@@ -45,17 +39,22 @@ function onBookClick(id) {
 
 function onRangeReduce(id) {
     const book = Gbooks.find(b => b.id === id);
+    if(book.rate > 1) {
     book.rate = book.rate - 1;
     localStorage.setItem('books', JSON.stringify(Gbooks));
     document.getElementById(`book-rate`).innerText = book.rate;
+    }
 }
 
 
 function onRangeIncrease(id) {
+
     const book = Gbooks.find(b => b.id === id);
+    if(book.rate < 10) {
     book.rate = book.rate + 1;
     localStorage.setItem('books', JSON.stringify(Gbooks));
     document.getElementById(`book-rate`).innerText = book.rate;
+    }
 }
 
 
@@ -90,7 +89,7 @@ function onPrevClick() {
 
 
 function onNewBookClick() {
-   openAddSideBar('add');
+    openAddSideBar('add');
 }
 
 
@@ -108,6 +107,6 @@ function sortBooks(property, order) {
             return order === 'asc' ? a.title.localeCompare(b.title) : b.title.localeCompare(a.title);
         }
     });
-    CurrentBook=0;
+    CurrentBook = 0;
     renderBooks(Gbooks.slice(CurrentBook, CurrentBook + 5));
 }

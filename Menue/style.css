@@ -40,6 +40,12 @@ h1 {
     align-items: center;
 }
 
+#language-selector {
+    margin-left: 10px;
+    padding: 5px 10px;
+    height: 35px;
+}
+
 .load-data {
     margin-right: 10px;
     padding: 5px 10px;
@@ -151,21 +157,22 @@ td button {
     margin: 10px;
     border-radius: 5px;
     cursor: pointer;
-   
+
     height: 40px;
-    
+
 
 }
 
-.button{
+.button {
     margin-top: 20px;
     padding: 10px 20px;
     background-color: #000;
     color: #fff;
-   
+
     cursor: pointer;
     border-radius: 6px;
 }
+
 .close-btn {
     position: absolute;
     top: 10px;
@@ -180,8 +187,7 @@ td button {
     color: red;
 }
 
-.for-cursor
-{
+.for-cursor {
     cursor: pointer;
 }
 
@@ -194,7 +200,6 @@ td button {
     float: left;
 }
 
-[dir="rtl"] #language-selector
-{
-   margin-right: 3px;
+[dir="rtl"] #language-selector {
+    margin-right: 3px;
 }

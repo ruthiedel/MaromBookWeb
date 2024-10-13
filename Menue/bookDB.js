@@ -116,4 +116,3 @@ const Dbooks = [
 
   var Gbooks =[];
   var CurrentBook=0;
-  var CurrenPage =1;
